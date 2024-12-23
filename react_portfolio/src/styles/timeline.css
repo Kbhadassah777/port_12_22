@@ -1,0 +1,154 @@
+/* .wrapper {
+  background: #666573;
+  font-family: "Maven Pro", sans-serif;
+  color: #fff;
+} */
+
+.timeline {
+  position: relative;
+
+  padding: 0 10;
+}
+
+.timeline ul {
+  background: #000;
+  
+}
+
+.timeline ul li {
+  position: relative;
+  width: 4px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: inherit;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.timeline ul li div {
+  position: relative;
+  width: 400px;
+  padding: 10px 15px 15px;
+  background: #fff;
+  color: #020;
+  box-shadow: 10px 10px 0px #aaafff;
+  opacity: 0;
+  transform: translate3d(200px, 0, 0);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+  transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.inView div {
+  opacity: 1;
+  transform: none;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -440px;
+}
+
+.timeline ul li.inView::after {
+  background: #fff;
+}
+
+.timeline ul li div::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+}
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+  }
+  .timeline ul li:nth-child(even) div {
+    left: -290px;
+  }
+}
+
+.header_edu {
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.header_edu h1 {
+  font-size: 3rem;}
+
+@media screen and (max-width: 600px) {
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-child(even) div {
+    left: 45px;
+  }
+}
+.edu{
+  background-color: #000;
+}
+
+.certifications {
+  margin-top: 3rem;
+  padding: 2rem;
+  color:#fff
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.subheading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cert {
+  width: 80px;
+  height: 50px;
+}
+
+.cert-google {
+  width: 50px;
+  height: 50px;
+}
+
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #eee;
+}
